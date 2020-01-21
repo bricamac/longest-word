@@ -14,7 +14,7 @@ class TestGame(unittest.TestCase):
         new_game = Game()
         grid = new_game.grid
         new_game.grid = list('ANLPIDFEW')
-        self.assertIs(new_game.is_valid('LAPIN'), True)
+        self.assertIs(new_game.is_valid('PINE'), True)
         self.assertEqual(new_game.grid, list('ANLPIDFEW'))
     #
     def test_is_invalid(self):
@@ -22,6 +22,7 @@ class TestGame(unittest.TestCase):
         new_game.grid = list('ANLPIDFEW')
         self.assertIs(new_game.is_valid('MAISON'), False)
         self.assertEqual(new_game.grid, list('ANLPIDFEW'))
+
     #Test dans un dico
     def test_unknown_word_is_invalid(self):
         new_game = Game()
